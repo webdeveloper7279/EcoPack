@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: oklch(0.98 0.01 140);
+  --color-foreground: oklch(0.15 0.02 140);
+  --color-primary: oklch(0.45 0.15 145);
+  --color-primary-foreground: oklch(0.98 0.01 145);
+  --color-muted: oklch(0.95 0.02 140);
+  --color-muted-foreground: oklch(0.45 0.05 140);
+  --color-card: oklch(1 0 0);
+  --color-border: oklch(0.9 0.02 140);
+  --color-ring: oklch(0.45 0.15 145);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.15 0.02 140);
+  --color-accent: oklch(0.95 0.02 140);
+  --color-accent-foreground: oklch(0.15 0.02 140);
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+.dark {
+  --color-background: oklch(0.12 0.02 140);
+  --color-foreground: oklch(0.95 0.02 140);
+  --color-primary: oklch(0.65 0.18 145);
+  --color-primary-foreground: oklch(0.15 0.02 145);
+  --color-muted: oklch(0.22 0.03 140);
+  --color-muted-foreground: oklch(0.65 0.05 140);
+  --color-card: oklch(0.18 0.02 140);
+  --color-border: oklch(0.3 0.04 140);
+  --color-ring: oklch(0.65 0.18 145);
+  --color-popover: oklch(0.18 0.02 140);
+  --color-popover-foreground: oklch(0.95 0.02 140);
+  --color-accent: oklch(0.22 0.03 140);
+  --color-accent-foreground: oklch(0.95 0.02 140);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Eco gradient theme */
+.gradient-eco {
+  background: linear-gradient(135deg, #0d9488 0%, #059669 50%, #16a34a 100%);
+}
+.gradient-eco-subtle {
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.08) 0%, rgba(5, 150, 105, 0.08) 50%, rgba(22, 163, 74, 0.08) 100%);
+}
