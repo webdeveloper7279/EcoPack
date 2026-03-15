@@ -1,49 +1,31 @@
-# Ecopiknik
+# GrowPack Eco Platform
 
-A modern ecological booking platform where users can book eco recreation places, play mini games, earn coins, and use them for discounts.
+A modern React frontend for the **GrowPack** eco startup – turn every package into a living plant. Built with **Vite**, **React**, **Tailwind CSS**, **Framer Motion**, **Leaflet**, and **Recharts**. No backend; data is simulated with **LocalStorage**.
 
-## Tech stack
-
-- **Next.js 14** (App Router)
-- **TypeScript**
-- **Tailwind CSS v4**
-- **ShadCN-style UI** (Radix primitives + CVA)
-- **Zustand** (state management)
-- **Axios** (API layer; mock data in this repo)
-- **React Hook Form + Zod** (forms & validation)
-- **Framer Motion** (animations)
-
-## Getting started
+## Run the app
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:5173](http://localhost:5173).
 
 ## Features
 
-- **Auth**: Login, register, profile, JWT-style token storage, protected routes, logout, coin balance in navbar
-- **Home**: Hero, featured places, “How it works”, eco coin explanation, CTAs
-- **Places**: Grid of eco locations with filters (price, location, rating), search, “Book now”
-- **Place detail**: Gallery, description, amenities, map placeholder, date picker, guests, dynamic price, coin discount (1 coin = 1000 UZS, max 30%), booking summary modal, confirmation
-- **Eco games**: Recycle click game (30s, coins per click), sorting game (drag & drop to bins), coins added to balance
-- **Dashboard**: Booking history, total coins earned, games played, stats
-- **Admin**: Add/edit/delete places, view all bookings
+- **Home**: Hero, plant status card, eco points ball, motivation block, “I planted a GrowPack” with confetti
+- **Eco Map**: Leaflet map with city markers (GrowPack counts), leaderboards (users, universities, restaurants), animated statistics and Recharts
+- **Profile**: User card, plant gallery (upload images), PDF certificate download, partners section
+- Sticky navbar, dark/light toggle, smooth page transitions, mobile-responsive layout
 
-## Project structure
+## Tech stack
 
-```
-/app          – App Router pages
-/components   – Reusable UI and layout
-/features     – Feature-specific components (place card, booking modal, games)
-/store        – Zustand stores (auth, theme, toast, bookings, places, game stats)
-/lib          – API, mock data, utils
-/types        – Shared TypeScript types
-/hooks        – useAuth, useMount, etc.
-```
+- React 18 + Vite
+- Tailwind CSS (eco theme, glassmorphism)
+- Framer Motion (animations)
+- React Router DOM
+- Leaflet / react-leaflet (map)
+- Recharts (charts)
+- jsPDF (certificate)
 
-## Mock API
-
-All data is in-memory (no backend). Auth uses a stored token and mock user; places and bookings are held in `lib/api.ts` and reset on refresh.
+Data is stored in **LocalStorage** (user profile, plants, plant images, theme).

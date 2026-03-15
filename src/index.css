@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-950 text-slate-50 antialiased;
+}
+
+.glass-card {
+  @apply bg-white/10 dark:bg-slate-900/40 border border-white/10 dark:border-white/5 backdrop-blur-2xl shadow-glass rounded-3xl;
+}
+
+.eco-gradient-bg {
+  @apply bg-eco-gradient;
+}
+
+/* Leaflet map container (Tailwind preflight can affect it) */
+.leaflet-container {
+  font-family: inherit;
+  z-index: 0;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.95);
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.eco-marker {
+  background: none !important;
+  border: none !important;
+}
+
